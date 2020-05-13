@@ -1,9 +1,14 @@
 {{ define "main" }}
 
 <style>
-    #gallery .flickity-viewport {
-        height: full !important;
-    }
+#gallery img {
+    opacity: 0;
+    transition: .2s;
+}
+#gallery .is-selected {
+    opacity: 100;
+    transition: .2s;
+}
 </style>
 
 <div class="flex flex-wrap w-full max-w-8xl mx-auto">
@@ -35,13 +40,14 @@
 </div>
 
 <div class="micromodal-slide" id="gallery" aria-hidden="true">
-  <div class="bg-white z-50 modal__overlay" tabindex="-1">
+  <div class="bg-white z-40 modal__overlay" tabindex="-1">
         <div class="w-full pt-12 photo-carousel-1" data-flickity='{ "pageDots": false, "setGallerySize": false, "imagesLoaded": true }'>
             {{ range where .Site.Pages "Type" "gallery" }}
             <img class="w-full" src="{{ .Site.Params.tracking.cloudinary_url }}{{ .Params.img }}">
             {{ end }}
         </div>
   </div>
+  <button class='{{ partial "gCSS/button/default-button.txt"}} absolute bottom-0 w-full mx-auto z-50' data-micromodal-close>Close</button>
 </div>
 
 {{ end }}
