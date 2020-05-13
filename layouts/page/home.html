@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+<style>
+</style>
+
+<div class="flex flex-wrap w-full max-w-8xl mx-auto">
+
+    <div class="absolute bottom-0 right-0 w-5/6 md:w-7/12 xl:w-1/2 ml-auto z-min1 photo-carousel" data-flickity='{ "wrapAround": true, "contain": true, "fullscreen": true, "prevNextButtons": false, "pageDots": false, "autoPlay": true }'>
+        {{ range where .Site.Pages "Type" "gallery" }}
+        <img class="w-full" src="{{ .Site.Params.tracking.cloudinary_url }}{{ .Params.img }}">
+        {{ end }}
+    </div>
+
+    <div class="absolute top-0 flex flex-wrap mx-auto pt-64">
+        <div class="flex flex-wrap w-11/12 pl-8 mx-auto">
+            <div class="flex flex-wrap items-start w-full lg:w-7/12 max-w-8xl bg-white p-12 z-40 shadow-xl">
+                <h1 class='{{ partial "gCSS/type/heading.txt"}} text-5xl xl:text-6xl pb-4'>Reflecting stories in your spaces</h1>
+                <p class='{{ partial "gCSS/type/paragraph.txt"}} text-xl pb-4'>Through deep consideration for how spaces are used and lived in, Marks and Co. is providing the Southeast and Lowcountry with interior architecture and design that create a refined, distinct, and classic atmosphere that people relish.</p>
+                <a href="/contact/" class='{{ partial "gCSS/button/default-button.txt"}} hidden md:block'>
+                    CONTACT US
+                </a>
+                <a href="/contact/" class='{{ partial "gCSS/button/default-button.txt"}} md:hidden mb-5 mr-5'>
+                    CONTACT
+                </a>
+                <a data-micromodal-trigger="gallery" class='{{ partial "gCSS/button/default-button.txt"}} md:hidden'>
+                    GALLERY
+                </a>
+            </div>
+        </div>
+    </div>
+    <p class='{{ partial "gCSS/type/paragraph.txt"}} absolute bottom-0 w-auto text-xs mx-auto pb-5 pl-32 uppercase'>&copy; {{ dateFormat "2006" now }} {{ .Site.Title }} | All Rights Reserved | MADE BY PIONEER</p>
+</div>
+
+<div class="micromodal-slide" id="gallery" aria-hidden="true">
+  <div class="bg-white z-50 modal__overlay" tabindex="-1">
+        <div class="w-full photo-carousel-1" data-flickity='{ "wrapAround": true }'>
+            {{ range where .Site.Pages "Type" "gallery" }}
+            <img class="w-full" src="{{ .Site.Params.tracking.cloudinary_url }}{{ .Params.img }}">
+            {{ end }}
+        </div>
+  </div>
+</div>
+
+{{ end }}
