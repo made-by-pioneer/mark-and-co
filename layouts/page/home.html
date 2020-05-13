@@ -1,6 +1,9 @@
 {{ define "main" }}
 
 <style>
+    #gallery .flickity-viewport {
+        height: full !important;
+    }
 </style>
 
 <div class="flex flex-wrap w-full max-w-8xl mx-auto">
@@ -33,7 +36,7 @@
 
 <div class="micromodal-slide" id="gallery" aria-hidden="true">
   <div class="bg-white z-50 modal__overlay" tabindex="-1">
-        <div class="w-full photo-carousel-1" data-flickity='{ "wrapAround": true }'>
+        <div class="w-full pt-12 photo-carousel-1" data-flickity='{ "wrapAround": true, "pageDots": false, "setGallerySize": false }'>
             {{ range where .Site.Pages "Type" "gallery" }}
             <img class="w-full" src="{{ .Site.Params.tracking.cloudinary_url }}{{ .Params.img }}">
             {{ end }}
