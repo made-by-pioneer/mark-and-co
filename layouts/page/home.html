@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <style>
-#gallery img {
+#gallery .single {
     opacity: 0;
     transition: .2s;
 }
@@ -19,11 +19,11 @@
         {{ end }}
     </div>
 
-    <div class="absolute top-0 flex flex-wrap mx-auto pt-40 lg:pt-64">
+    <div class="absolute top-0 flex flex-wrap mx-auto pt-40 xxl:pt-56">
         <div class="flex flex-wrap w-11/12 pl-8 mx-auto">
             <div class="flex flex-wrap items-start w-full lg:w-7/12 max-w-8xl bg-white p-12 z-40 shadow-xl">
-                <h1 class='{{ partial "gCSS/type/heading.txt"}} text-5xl xl:text-6xl pb-4'>Reflecting stories in your spaces</h1>
-                <p class='{{ partial "gCSS/type/paragraph.txt"}} text-xl pb-4'>Through deep consideration for how spaces are used and lived in, Marks and Co. is providing the Southeast and Lowcountry with interior architecture and design that create a refined, distinct, and classic atmosphere that people relish.</p>
+                <h1 class='{{ partial "gCSS/type/heading.txt"}} text-5xl xxl:text-6xl pb-4'>Reflecting stories in your spaces</h1>
+                <p class='{{ partial "gCSS/type/paragraph.txt"}} text-lg xxl:text-xl pb-4'>Through deep consideration for how spaces are used and lived in, Marks and Co. is providing the Southeast and Lowcountry with interior architecture and design that create a refined, distinct, and classic atmosphere that people relish.</p>
                 <a href="/contact/" class='{{ partial "gCSS/button/default-button.txt"}} hidden md:block'>
                     CONTACT US
                 </a>
@@ -40,10 +40,19 @@
 </div>
 
 <div class="micromodal-slide" id="gallery" aria-hidden="true">
-  <div class="bg-white z-40 modal__overlay" tabindex="-1">
-        <div class="w-full pt-12 photo-carousel-1" data-flickity='{ "pageDots": false, "setGallerySize": false, "imagesLoaded": true }'>
+  <div class="bg-white pt-12 z-50 modal__overlay" tabindex="-1">
+        <div class="w-full h-full photo-carousel-1" data-flickity='{ "pageDots": false, "setGallerySize": false, "imagesLoaded": true }'>
             {{ range where .Site.Pages "Type" "gallery" }}
-            <img class="w-full" src="{{ .Site.Params.tracking.cloudinary_url }}{{ .Params.img }}">
+            <div class="w-full single">
+                <style>
+                    .modal-gallery-img-{{ .File.UniqueID }} {
+                        background-image: url("{{ .Site.Params.tracking.cloudinary_url }}{{ .Params.img }}")
+                    }
+                </style>
+                <div class="bg-cover bg-center bg-no-repeat py-80 modal-gallery-img-{{ .File.UniqueID }}">
+
+                </div>
+            </div>
             {{ end }}
         </div>
   </div>

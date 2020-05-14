@@ -14,24 +14,24 @@
     <div class="absolute top-0 flex flex-wrap mx-auto pt-40 lg:pt-48">
         <div class="flex flex-wrap w-5/6 mx-auto">
             <div class="flex flex-wrap items-start w-full lg:w-7/12 max-w-8xl bg-white p-12 z-40 shadow-xl">
-                <h1 class='{{ partial "gCSS/type/heading.txt"}} text-5xl xl:text-6xl pb-4'>Contact Us</h1>
-                <p class='{{ partial "gCSS/type/paragraph.txt"}} text-xl pb-4'>Please take a moment to tell us a little about yourself and your project. We’ll get back to you within 7 business days.</p>
+                <h1 class='{{ partial "gCSS/type/heading.txt"}} text-5xl xxl:text-6xl pb-4'>Contact Us</h1>
+                <p class='{{ partial "gCSS/type/paragraph.txt"}} text-lg xxl:text-xl pb-4'>Please take a moment to tell us a little about yourself and your project. We’ll get back to you within 7 business days.</p>
                 <form class="flex flex-wrap w-full" action="/thank-you/" netlify-honeypot="field-for-coolguys" name="" method="POST" netlify>
                     <input type="hidden" name="subject" value="New Submission from Website" />
-                    <div class="flex flex-wrap w-5/12 border-8 border-white">
+                    <div class="flex flex-wrap w-full md:w-5/12 border-8 border-white">
                         <input name="first-name" type="text" placeholder="First name" class="w-full border border-color-013644 p-2 rounded-lg" required>
                     </div>
-                    <div class="flex flex-wrap w-5/12 border-8 border-white">
+                    <div class="flex flex-wrap w-full md:w-5/12 border-8 border-white">
                         <input name="last-name" type="text" placeholder="Last name" class="w-full border border-color-013644 p-2 rounded-lg" required>
                     </div>
-                    <div class="flex flex-wrap w-5/12 border-8 border-white">
+                    <div class="flex flex-wrap w-full md:w-5/12 border-8 border-white">
                         <input name="email" type="email" placeholder="Email" class="w-full border border-color-013644 p-2 rounded-lg" required>
                     </div>
                     <input type="text" name="field-for-coolguys" style="display:none" />
-                    <div class="flex flex-wrap w-5/12 border-8 border-white">
+                    <div class="flex flex-wrap w-full md:w-5/12 border-8 border-white">
                         <input name="phone" type="tel" placeholder="Phone Number" class="w-full border border-color-013644 p-2 rounded-lg" required>
                     </div>
-                    <div class="flex flex-wrap w-5/6 h-32 border-8 border-white">
+                    <div class="flex flex-wrap w-full md:w-5/6 h-32 border-8 border-white">
                         <textarea name="message" placeholder="Message" class="w-full border border-color-013644 p-2 rounded-lg" required></textarea>
                     </div>
                     <div class="ml-auto">
