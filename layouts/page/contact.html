@@ -38,10 +38,11 @@
                         <input class='{{ partial "gCSS/button/default-button.txt"}} mt-4 hover:cursor-pointer' type="submit" value="Contact Us" class="">
                     </div>
                 </form>
+                <p class='{{ partial "gCSS/type/paragraph.txt"}} w-full lg:hidden text-xs mx-auto pt-8 uppercase'>&copy; {{ dateFormat "2006" now }} {{ .Site.Title }} | All Rights Reserved | MADE BY PIONEER</p>
             </div>
         </div>
     </div>
-    <p class='{{ partial "gCSS/type/paragraph.txt"}} absolute bottom-0 w-auto text-xs mx-auto pb-5 pl-32 uppercase'>&copy; {{ dateFormat "2006" now }} {{ .Site.Title }} | All Rights Reserved | MADE BY PIONEER</p>
+    <p class='{{ partial "gCSS/type/paragraph.txt"}} hidden lg:block absolute bottom-0 w-auto text-xs mx-auto pb-5 pl-32 uppercase'>&copy; {{ dateFormat "2006" now }} {{ .Site.Title }} | All Rights Reserved | MADE BY PIONEER</p>
 </div>
 
 {{ end }}
