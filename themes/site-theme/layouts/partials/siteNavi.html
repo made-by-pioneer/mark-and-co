@@ -58,8 +58,8 @@
 </a>
 
 <div class="micromodal-slide" id="mobile-menu" aria-hidden="true">
-  <div class="flex flex-wrap z-50 modal__overlay" tabindex="-1">
-    <div class="flex flex-wrap lg:block items-start w-full lg:w-1/2 ml-auto bg-white py-8 px-5 xs:px-10 md:px-20 lg:px-12 xl:px-24 shadow-lg modal__container">
+  <div class="flex flex-wrap items-start z-50 modal__overlay" tabindex="-1">
+    <div class="flex flex-wrap lg:block items-start w-full lg:w-1/2 lg:h-full ml-auto bg-white pt-8 lg:pt-4 px-5 xs:px-10 md:px-20 lg:px-12 xl:px-24 shadow-lg modal__container">
       <div id="logo" class="lg:hidden w-1/2 text-2xl xs:text-3xl sm:text-4xl md:text-4xl py-1 z-50">
         <a id="logo-text" href="/" class="font-ibm-mono font-bold text-left">
           <img class="w-64" src="{{ .Site.Data.global_data.logos.logo }}">
@@ -68,7 +68,7 @@
       <div class="w-1/2 lg:w-full text-right lg:p-6">
         <a data-micromodal-close aria-label="Close this dialog window" class="text-3xl text-color-013644 text-right lg:pr-6 hover:cursor-pointer"><i data-micromodal-close class="fas fa-times"></i></a>
       </div>
-      <div class="w-11/12 sm:w-5/6 mx-auto flex flex-wrap font-dom mobile-menu-list">
+      <div class="w-11/12 sm:w-5/6 mx-auto flex flex-wrap font-dom pt-5 mobile-menu-list">
         {{ $currentNode := . }}
         {{ range .Site.Menus.mobile }}
         {{ if .HasChildren }}
