@@ -1,7 +1,7 @@
 baseURL = "https://markandco.netlify.app/"
 languageCode = "en-us"
 theme = "site-theme"
-title = "Example"
+title = "Marks and Co Interiors"
 enableRobotsTXT = true
 
 [[menu.desktop]]
