@@ -1,0 +1,10 @@
+---
+label: Home Page
+hide_body: true
+fields:
+- type: text
+  name: type
+  label: type
+- type: boolean
+  name: robotsdisallow
+  label: robotsdisallow
