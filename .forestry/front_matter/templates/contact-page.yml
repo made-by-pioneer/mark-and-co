@@ -43,3 +43,5 @@ fields:
   - type: textarea
     name: paragraph_text
     label: paragraph_text
+pages:
+- content/pages/contact.md
