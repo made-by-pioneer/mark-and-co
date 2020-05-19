@@ -1,6 +1,11 @@
 User-agent: *
 
-Disallow: /
+Disallow:
+
+/thank-you/
+
+/gallery/
 
 
-Sitemap: https://gz-default.netlify.com/sitemapindex.xml
+
+Sitemap: https://marksandcointeriors.com/sitemapindex.xml
