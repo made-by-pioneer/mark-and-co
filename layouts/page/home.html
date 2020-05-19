@@ -21,7 +21,7 @@
 
     <div class="absolute top-0 flex flex-wrap mx-auto pt-40 xxl:pt-56">
         <div class="flex flex-wrap w-11/12 pl-8 mx-auto">
-            <div class="flex flex-wrap items-start w-full lg:w-7/12 max-w-8xl bg-white p-12 z-40 shadow-xl">
+            <div class="flex flex-wrap items-start w-full lg:w-7/12 max-w-8xl bg-white border border-color-FAE8DF p-12 z-40 shadow-xl">
                 <h1 class='{{ partial "gCSS/type/heading.txt"}} text-5xl xxl:text-6xl pb-4'>{{ .Params.hero_section.title }}</h1>
                 <p class='{{ partial "gCSS/type/paragraph.txt"}} text-lg xxl:text-xl pb-4'>{{ .Params.hero_section.paragraph_text | safeHTML }}</p>
                 <a href="{{ .Params.hero_section.button_link }}" class='{{ partial "gCSS/button/default-button.txt"}} hidden md:block'>
@@ -33,11 +33,11 @@
                 <a data-micromodal-trigger="gallery" class='{{ partial "gCSS/button/default-button.txt"}} md:hidden'>
                     {{ .Params.hero_section.mobile_buttons.gallery_button.button_text }}
                 </a>
-                <p class='w-full lg:hidden font-sty text-color-013644 leading-normal tracking-wide stext-xs mx-auto pt-8 uppercase'>&copy; {{ dateFormat "2006" now }} {{ .Site.Title }} | All Rights Reserved | MADE BY PIONEER</p>
+                <p class='w-full lg:hidden font-sty text-color-013644 leading-normal tracking-wide text-2xs mx-auto pt-8 uppercase'>&copy; {{ dateFormat "2006" now }} {{ .Site.Title }} | All Rights Reserved | MADE BY PIONEER</p>
             </div>
         </div>
     </div>
-    <p class='hidden lg:block absolute bottom-0 font-sty text-color-013644 leading-normal tracking-wide w-auto text-xs mx-auto pb-5 pl-32 uppercase'>&copy; {{ dateFormat "2006" now }} {{ .Site.Title }} | All Rights Reserved | MADE BY PIONEER</p>
+    <p class='hidden lg:block absolute bottom-0 font-sty text-color-013644 leading-normal tracking-wide w-auto text-2xs mx-auto pb-5 pl-24 uppercase'>&copy; {{ dateFormat "2006" now }} {{ .Site.Title }} | All Rights Reserved | MADE BY PIONEER</p>
 </div>
 
 <div class="micromodal-slide" id="gallery" aria-hidden="true">
