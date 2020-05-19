@@ -1,4 +1,4 @@
-baseURL = "https://markandco.netlify.app/"
+baseURL = "https://marksandcointeriors.com/"
 languageCode = "en-us"
 theme = "site-theme"
 title = "Marks and Co Interiors"
@@ -22,7 +22,7 @@ enableRobotsTXT = true
 [params.tracking]
     cloudinary_url = "https://res.cloudinary.com/pioneer-design/image/upload"
 [params.publishing_settings]
-    site_in_production = false
+    site_in_production = true
 
 [mediaTypes]
   [mediaTypes."text/noExt"]
@@ -62,7 +62,7 @@ enableRobotsTXT = true
     index_name = ""
 
 [params.extra_tools]
-    algolia_search = true
+    algolia_search = false
     font_awesome = true
     floating_header = true
 
