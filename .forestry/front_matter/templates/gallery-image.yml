@@ -1,0 +1,7 @@
+---
+label: Gallery Image
+hide_body: true
+fields:
+- type: file
+  name: img
+  label: img
