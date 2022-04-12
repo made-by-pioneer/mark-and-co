@@ -13,6 +13,15 @@
         {{ partial "head/font-awesome.html" . }}
         {{ partial "head/google-analytics.html" . }}
         <link rel="stylesheet" href="https://use.typekit.net/mom8pwt.css">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FC6GF6562"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3FC6GF6562');
+        </script>
     </head>
 
 {{ partial "head/site-schema" . }}
