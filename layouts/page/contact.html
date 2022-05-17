@@ -1,6 +1,32 @@
 {{ define "main" }}
 
 <style>
+.cog-label {
+    display: none !important; 
+}
+.el-input {
+    border: 1px solid #013644;
+    padding: 12px 12px 8px 12px;
+    border-radius: 6px;
+}
+.el-textarea {
+    border: 1px solid #013644;
+    padding: 12px 12px 8px 12px;
+    border-radius: 6px;
+}
+.el-button {
+    background-color: #FFF8F5;
+    border: 1px solid #013644;
+    font-family: StyreneA-Regular;
+    color: #013644;
+    text-transform: uppercase;
+    padding: 8px 12px 8px 12px;
+    border-radius: 6px;
+}
+
+.el-button:hover {
+    background-color: #FDD6C4;
+}
 </style>
 
 <div class="flex flex-wrap w-full max-w-8xl mx-auto">
@@ -16,28 +42,7 @@
             <div class="flex flex-wrap items-start w-full lg:w-7/12 max-w-8xl bg-white border border-color-FAE8DF p-12 z-40 shadow-xl">
                 <h1 class='{{ partial "gCSS/type/heading.txt"}} text-5xl xxl:text-6xl pb-4'>{{ .Params.hero_section.title }}</h1>
                 <p class='{{ partial "gCSS/type/paragraph.txt"}} text-lg xxl:text-xl pb-4'>{{ .Params.hero_section.paragraph_text | safeHTML }}</p>
-                <form class="flex flex-wrap w-full" action="/thank-you/" netlify-honeypot="field-for-coolguys" name="contact-form" method="POST" netlify>
-                    <input type="hidden" name="subject" value="New Submission from Website" />
-                    <div class="flex flex-wrap w-full md:w-5/12 border-8 border-white">
-                        <input name="first-name" type="text" placeholder="First name" class="w-full border border-color-013644 p-2 rounded-lg" required>
-                    </div>
-                    <div class="flex flex-wrap w-full md:w-5/12 border-8 border-white">
-                        <input name="last-name" type="text" placeholder="Last name" class="w-full border border-color-013644 p-2 rounded-lg" required>
-                    </div>
-                    <div class="flex flex-wrap w-full md:w-5/12 border-8 border-white">
-                        <input name="email" type="email" placeholder="Email" class="w-full border border-color-013644 p-2 rounded-lg" required>
-                    </div>
-                    <input type="text" name="field-for-coolguys" style="display:none" />
-                    <div class="flex flex-wrap w-full md:w-5/12 border-8 border-white">
-                        <input name="phone" type="tel" placeholder="Phone Number" class="w-full border border-color-013644 p-2 rounded-lg" required>
-                    </div>
-                    <div class="flex flex-wrap w-full md:w-5/6 h-32 border-8 border-white">
-                        <textarea name="message" placeholder="Message" class="w-full border border-color-013644 p-2 rounded-lg" required></textarea>
-                    </div>
-                    <div class="w-full md:w-auto md:ml-auto">
-                        <input class='bg-color-FFF8F5 border border-color-013644 font-sty text-color-013644 uppercase text-2xs md:text-sm tracking-wider py-2 px-12 rounded-lg hover:bg-color-FDD6C4 w-full md:w-auto mt-4 hover:cursor-pointer' type="submit" value="Contact Us" class="">
-                    </div>
-                </form>
+                <script src="https://www.cognitoforms.com/f/seamless.js" data-key="IG83lPQs7UKU2FDeP--HlA" data-form="36"></script>
                 <p class='w-full lg:hidden font-sty text-color-013644 leading-normal tracking-wide stext-xs mx-auto pt-8 uppercase'>&copy; {{ dateFormat "2006" now }} {{ .Site.Title }} | All Rights Reserved | MADE BY PIONEER</p>
             </div>
         </div>
